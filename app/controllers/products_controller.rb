@@ -13,10 +13,10 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     if @product.save
-      flash[:notice] = "Product successfully added!"
+      flash[:notice] = "Spice successfully added!"
       redirect_to products_path
     else
-      flash[:alert] = "There was an error in creating your product."
+      flash[:alert] = "There was an error in adding your Spice."
       render :new
     end
   end
@@ -34,10 +34,10 @@ class ProductsController < ApplicationController
   def update
     @product = Product.find(params[:id])
     if @product.update(product_params)
-      flash[:notice] = "Product successfully updated!"
+      flash[:notice] = "Spice successfully updated!"
       redirect_to products_path
     else
-      flash[:alert] = "There was an error in updating your product!"
+      flash[:alert] = "There was an error in updating your Spice!"
       render :edit
     end
   end
