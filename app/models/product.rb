@@ -6,6 +6,9 @@ class Product < ApplicationRecord
   before_save(:titleize_product)
 
   scope :most_recent, -> { order(created_at: :desc).limit(3) }
+  scope :most_reviews, -> {(
+    select("")
+  )}
 
   private
     def titleize_product

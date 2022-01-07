@@ -1,1 +1,9 @@
 <h1>Welcome!</h1>
+<% if @products.any? %>
+  <h5>Freshest Spices!</h5>
+  <% @products_most_recent.each do |product| %>
+    <p><%= link_to product.name, product_path(product)%></p>
+  <% end %>
+<% else %>
+  <p>No recently added spices to display.</p>
+<%end%>
