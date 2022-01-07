@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 Product.destroy_all
 
-20.times do |index|
+50.times do |index|
   product = Product.create!({name: Faker::Food.unique.spice,
     country_of_origin: Faker::Books::Dune.planet,
     cost: rand(3..99)})
@@ -20,4 +20,4 @@ Product.destroy_all
 end
 
 p "Created #{Product.count} products"
-p "Created #{Review.count} products"
+p "Created #{Review.count} reviews"
