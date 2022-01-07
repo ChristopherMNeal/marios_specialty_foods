@@ -9,7 +9,7 @@ Product.destroy_all
 
 20.times do |index|
   product = Product.create!({name: Faker::Food.unique.spice,
-    country_of_origin: Faker::Books::Dune.city,
+    country_of_origin: Faker::Books::Dune.planet,
     cost: rand(3..99)})
   rand(3..11).times do |index|
     Review.create!({author: Faker::Books::Dune.character, 
