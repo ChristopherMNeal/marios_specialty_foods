@@ -1,0 +1,14 @@
+<h2><%= @product.name %></h2>
+
+<h3>Review:</h3>
+<p><%= @review.rating %> Stars</p>
+<p><%= @review.content_body %></p>
+<p>By <%= @review.author %> on <%= @review.created_on %></p>
+
+<p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
+<p><%= link_to "Delete review", product_review_path(@product, @review),
+  :data => {:confirm => "are you sure?",
+  :method => "delete"} %></p>
+
+<p><%= link_to "Return to product", product_path(@product) %></p>
+
