@@ -7,7 +7,11 @@ class Product < ApplicationRecord
 
   scope :most_recent, -> { order(created_at: :desc).limit(3) }
   scope :most_reviews, -> {(
-    select("")
+    select("products.id, products.name, count(reviews.id) as reviews_count")
+    .joins(:reviews)
+    .group("products.name")
+    .order("reviews_count DESC")
+    .limit(10)
   )}
 
   private
