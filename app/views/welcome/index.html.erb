@@ -9,7 +9,7 @@
 <%end%>
 
 <% if @products.any? %>
-  <h5>Most Reviewed Spices!</h5>
+  <h5>Most Reviewed Spice! (See for yourself what all the hoopla is about!)</h5>
   <% @products_most_reviews.each do |product| %>
     <p><%= link_to product.name, product_path(product)%></p>
   <% end %>
