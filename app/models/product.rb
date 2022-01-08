@@ -13,6 +13,7 @@ class Product < ApplicationRecord
     .order("reviews_count DESC")
     .limit(1)
   )}
+  scope :local, -> { where(country_of_origin: "Dune") }
 
   private
     def titleize_product

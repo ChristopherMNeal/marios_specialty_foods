@@ -1,18 +1,21 @@
 <h1>Welcome!</h1>
-<% if @products.any? %>
+<% if @products_most_recent.any? %>
   <h5>Freshest Spices! (most recently added)</h5>
-  <% @products_most_recent.each do |product| %>
-    <p><%= link_to product.name, product_path(product)%></p>
-  <% end %>
+  <ul>
+    <% @products_most_recent.each do |product| %>
+      <li><%= link_to product.name, product_path(product)%></li>
+    <% end %>
+  </ul>
 <% else %>
   <p>No recently added spices to display.</p>
 <%end%>
 
-<% if @products.any? %>
-  <h5>Most Reviewed Spice! (See for yourself what all the hoopla is about!)</h5>
+<% if @products_most_reviews.any? %>
+  <h5>Our Most Reviewed Spice is 
   <% @products_most_reviews.each do |product| %>
-    <p><%= link_to product.name, product_path(product)%></p>
+    <%= link_to product.name, product_path(product)%>
   <% end %>
+  (See for yourself what all the hoopla is about!)</h5>
 <% else %>
   <p>No reviewed spices to display.</p>
 <%end%>

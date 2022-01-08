@@ -3,7 +3,7 @@
 <% if @products.any? %>
   <ul>
     <% @products.each do |product| %>
-      <li><%= link_to product.name + " - ☼" + product.cost.to_s, product_path(product) %></li>
+      <li><%= link_to product.name + " from " + product.country_of_origin + " - ☼" + product.cost.to_s, product_path(product) %></li>
     <% end %>
   </ul>
 <% else %>
@@ -12,3 +12,16 @@
 
 
 <p><%= link_to "Create new Spice", new_product_path %></p>
+
+<h1>Spices locally grown here on Arrakis (aka Dune)</h1>
+<h2>Blessed by Shai-Hulud</h2>
+
+<% if @products_local.any? %>
+  <ul>
+    <% @products_local.each do |product| %>
+      <li><%= link_to product.name + " - ☼" + product.cost.to_s, product_path(product) %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no local spices at this time.</p>
+<% end %>
