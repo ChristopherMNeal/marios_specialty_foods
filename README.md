@@ -1,6 +1,6 @@
 # _Mario's Specialty Foods_
 
-#### _Ruby week 4 Rails with Active Record Code Review project for Epicodus Bootcamp_
+#### _Ruby week 4 Code Review project for Rails with Active Record lesson at Epicodus Bootcamp_
 
 #### Created By: **Christopher Neal**
 
