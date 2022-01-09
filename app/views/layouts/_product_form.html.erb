@@ -6,6 +6,6 @@
   <%= f.label :country_of_origin, "Planet of Origin" %>
   <%= f.text_field :country_of_origin %>
   <%= f.label :cost, "Cost in Imperial Solari ☼" %>
-  <%= f.number_field :cost, in: 0..9999, step: 0.01 %>
+  <%= f.number_field :cost, in: 0..999999.99, step: 0.01 %>
   <%= f.submit %>
 <% end %>

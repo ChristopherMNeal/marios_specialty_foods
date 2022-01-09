@@ -3,6 +3,7 @@ class Product < ApplicationRecord
   validates :name, presence: true
   validates :country_of_origin, presence: true
   validates :cost, presence: true
+  validates_numericality_of :cost, greater_than: 0, less_than_or_equal_to: 999999.99
   before_save(:titleize_product)
 
   scope :most_recent, -> { order(created_at: :desc).limit(3) }
