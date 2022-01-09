@@ -1,6 +1,6 @@
 <h1><%= @product.name %></h1>
 <h3>Planet of Origin: <%= @product.country_of_origin %></h3>
-<h3>Cost per unit in Imperial Solari: ☼<%= @product.cost %></h3>
+<h3>Cost per unit in Imperial Solari: <%= number_to_currency(@product.cost, unit: "☼") %></h3>
 
 <% if @product.reviews.any? %>
   <h4>Here are the reviews for this spice:</h4>

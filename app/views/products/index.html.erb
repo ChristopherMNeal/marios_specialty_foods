@@ -3,7 +3,7 @@
 <% if @products.any? %>
   <ul>
     <% @products.each do |product| %>
-      <li><%= link_to product.name + " (" + product.country_of_origin + ") - ☼" + product.cost.to_s, product_path(product) %></li>
+      <li><%= link_to product.name + " (" + product.country_of_origin + ") - " + number_to_currency(product.cost, unit: "☼"), product_path(product) %></li>
     <% end %>
   </ul>
 <% else %>
