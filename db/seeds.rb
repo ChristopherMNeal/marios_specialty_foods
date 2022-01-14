@@ -15,7 +15,7 @@ end
   user = User.create!({email: 'user@fake.com', password: 'f4k3p455w0rd', admin: false})
 end
 
-melange = Product.create({ name: "Melange", country_of_origin: "Dune", cost: 998})
+melange = Product.create({ name: "Melange", country_of_origin: "Dune", cost: rand(998..200000)})
 Review.create({ author: "Muad'Dib", content_body: "Bless the Maker and His water. Bless the coming and going of Him. May His passage cleanse the world. May He keep the world for His people.", rating: 5, product_id: melange.id})
 
 49.times do |index|
