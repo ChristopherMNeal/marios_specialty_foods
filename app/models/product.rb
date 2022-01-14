@@ -25,20 +25,15 @@ class Product < ApplicationRecord
     end
   end
 
-  def ratings_average
-    ratings = self.review.where(created_at: 1.hour.ago..Time.now).order(:created_at).group(:user_id)
-
-    ratings.sum(:value) / ratings.count
-  end
-
-  # TRYING TO MAKE AN AVERAGE SCORE SCOPE
-  # scope :best_reviews, -> {(
-  #   select("products.id, products.name, review.rating, count(reviews.rating) as ratings_count")
-  #   .joins(:reviews)
-  #   .group("reviews.id")
-  #   .order("ratings_ DESC")
-  #   .limit(1)
-  # )}
+  scope :average_review, -> {(
+    select("products.id, products.name, average(reviews.rating) as reviews_avg")
+    .joins(:reviews)
+    .group("products.id")
+    .order("reviews_count DESC")
+    .limit(1)
+  )}
+  
+  Review.average(:rating)
 
   private
     def titleize_product
