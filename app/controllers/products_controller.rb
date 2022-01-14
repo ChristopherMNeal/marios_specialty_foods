@@ -4,7 +4,8 @@ class ProductsController < ApplicationController
     redirect_to products_path unless current_user && current_user.admin
   end
   def index
-    @products = Product.all
+    # @products = Product.all
+    @products = Product.order(:name).page params[:page]
     @products_local = Product.local
     @products_featured = Product.featured
     render :index

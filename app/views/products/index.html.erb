@@ -8,6 +8,7 @@
           <li><%= link_to product.name + " (" + product.country_of_origin + ") - " + number_to_currency(product.cost, unit: "☼"), product_path(product) %></li>
         <% end %>
       </ul>
+      <%= paginate @products %>
     <% else %>
       <p>There are no spices yet.</p>
     <% end %>
