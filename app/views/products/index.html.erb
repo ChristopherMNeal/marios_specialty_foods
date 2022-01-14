@@ -1,14 +1,19 @@
 <h1>Spices</h1>
 <div class="row">
   <div class="col-lg-4">
-  <h2>Current availability:</h2>
+    <h2>Current availability:</h2>
+    <%= form_tag products_path, :method => "get" do %>
+      <%= label_tag(:search, "Search for a spice:") %>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag("Search", :name => nil) %>
+    <% end %>
     <% if @products.any? %>
       <ul>
         <% @products.each do |product| %>
           <li><%= link_to product.name + " (" + product.country_of_origin + ") - " + number_to_currency(product.cost, unit: "☼"), product_path(product) %></li>
         <% end %>
       </ul>
-      <%= paginate @products %>
+      <%# paginate @products %>
     <% else %>
       <p>There are no spices yet.</p>
     <% end %>

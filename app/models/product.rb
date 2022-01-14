@@ -17,6 +17,19 @@ class Product < ApplicationRecord
   scope :local, -> { where(country_of_origin: "Dune") }
   scope :featured, -> { where(featured: true) }
 
+  def self.search(search)
+    if search
+    product_type = Product.find_by(name: search)
+      if product_type
+        self.where(id: product_type)
+      else
+        @products = Product.all
+      end
+    else
+      @products = Product.all
+    end
+  end
+
   private
     def titleize_product
       self.name = self.name.titleize

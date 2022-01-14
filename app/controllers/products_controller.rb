@@ -5,7 +5,8 @@ class ProductsController < ApplicationController
   end
   def index
     # @products = Product.all
-    @products = Product.order(:name).page params[:page]
+    # @products = Product.order(:name).page params[:page]
+    @products = Product.search(params[:search])
     @products_local = Product.local
     @products_featured = Product.featured
     render :index
@@ -26,7 +27,7 @@ class ProductsController < ApplicationController
       render :new
     end
   end
-  
+
   def edit
     @product = Product.find(params[:id])
     render :edit
@@ -56,7 +57,7 @@ class ProductsController < ApplicationController
 
   private
     def product_params
-      params.require(:product).permit(:name, :country_of_origin, :cost, :featured)
+      params.require(:product).permit(:name, :country_of_origin, :cost, :featured, :search)
     end
 
 end
