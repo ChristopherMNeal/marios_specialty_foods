@@ -5,10 +5,12 @@
 <p><%= @review.content_body %></p>
 <p>By <%= @review.author %> on <%= @review.created_at %></p>
 
-<p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
-<p><%= link_to "Delete review", product_review_path(@product, @review),
-  :data => {:confirm => "are you sure?",
-  :method => "delete"} %></p>
+<% if current_user && current_user.admin %>
+  <p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
+  <p><%= link_to "Delete review", product_review_path(@product, @review),
+    :data => {:confirm => "are you sure?",
+    :method => "delete"} %></p>
+<% end %>
 
 <p><%= link_to "Return to Spice", product_path(@product) %></p>
 

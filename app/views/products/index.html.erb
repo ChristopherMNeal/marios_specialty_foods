@@ -10,8 +10,9 @@
   <p>There are no spices yet.</p>
 <% end %>
 
-
-<p><%= link_to "Create new Spice", new_product_path %></p>
+<% if current_user && current_user.admin %>
+  <p><%= link_to "Create new Spice", new_product_path %></p>
+<% end %>
 
 <h1>Spices locally grown here on Arrakis (aka Dune)</h1>
 <h2>Blessed by Shai-Hulud</h2>

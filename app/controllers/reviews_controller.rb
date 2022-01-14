@@ -1,6 +1,6 @@
 class ReviewsController < ApplicationController
-  before_action :only => [:new, :edit, :destroy] do
-    redirect_to new_user_session_path unless current_user && current_user.admin
+  before_action :only => [:edit, :destroy] do
+    redirect_to products_path unless current_user && current_user.admin
   end
   def new
     @product = Product.find(params[:product_id])

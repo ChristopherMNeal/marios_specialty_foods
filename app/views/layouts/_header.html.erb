@@ -12,9 +12,11 @@
       <li class="nav-item">
         <%= link_to "All Spices", products_path, class: "nav-item nav-link mx-3" %>
       </li>
+      <% if current_user && current_user.admin %>
       <li class="nav-item">
-        <%= link_to "Add new Spice", new_product_path, class: "nav-item nav-link mx-3" %>
+      <%= link_to "Add new Spice", new_product_path, class: "nav-item nav-link mx-3" %>
       </li>
+      <% end %>
     </ul>
   </div>
 </nav>
