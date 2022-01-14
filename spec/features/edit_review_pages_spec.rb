@@ -29,3 +29,17 @@ describe "the edit a review process" do
     expect(page).to have_content 'There was an error in updating your review!'
   end
 end
+
+describe "the unauthorized to edit a product if not admin process" do
+  before :each do
+    user = User.create!({email: 'user2@fake.com', password: 'f4k3p455w0rd', admin: false})
+    login_as(user, :scope => :user)
+  end
+  
+  it "fails to edit a review" do
+    product = Product.create!({name: 'the essence', country_of_origin: 'Arrakis', cost: '998'})
+    review = Review.create!({author: "Muad'dib", content_body: "Bless the Maker and His water. Bless the coming and going of Him. May His passage cleanse the world. May He keep the world for His people.", rating: 5, product_id: product.id})
+    visit edit_product_review_path(product, review)
+    expect(page).to have_content 'You are not authorized for this action.'
+  end
+end
