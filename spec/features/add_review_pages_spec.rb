@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe "the add a review process" do
   before :each do
-    user = User.create!({email: 'admin2@fake.com', password: 'f4k3p455w0rd', admin: true})
+    user = User.create!({email: 'user2@fake.com', password: 'f4k3p455w0rd', admin: false})
     login_as(user, :scope => :user)
     Product.create!({name: 'the essence', country_of_origin: 'Arrakis', cost: '998'})
     visit products_path
