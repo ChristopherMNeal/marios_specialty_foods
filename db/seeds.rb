@@ -9,10 +9,10 @@ Product.destroy_all
 User.destroy_all
 
 1.times do |index|
-  user = User.create!({email: 'admin@fake.com', password: 'testing', admin: true})
+  user = User.create!({email: 'admin@fake.com', password: 'f4k3p455w0rd', admin: true})
 end
 1.times do |index|
-  user = User.create!({email: 'user@fake.com', password: 'testing', admin: false})
+  user = User.create!({email: 'user@fake.com', password: 'f4k3p455w0rd', admin: false})
 end
 
 melange = Product.create({ name: "Melange", country_of_origin: "Dune", cost: 998})
