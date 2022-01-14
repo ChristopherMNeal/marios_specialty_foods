@@ -24,7 +24,7 @@ describe "the add a product process" do
   end
 end
 
-describe "the 'unauthorized to add a product' process" do
+describe "the unauthorized to add a product if not admin process" do
   before :each do
     user = User.create!({email: 'user2@fake.com', password: 'f4k3p455w0rd', admin: false})
     login_as(user, :scope => :user)
