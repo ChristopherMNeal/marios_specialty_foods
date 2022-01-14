@@ -15,6 +15,7 @@ class Product < ApplicationRecord
     .limit(1)
   )}
   scope :local, -> { where(country_of_origin: "Dune") }
+  scope :featured, -> { where(featured: true) }
 
   private
     def titleize_product

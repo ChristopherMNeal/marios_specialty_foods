@@ -1,28 +1,45 @@
 <h1>Spices</h1>
-
-<% if @products.any? %>
-  <ul>
-    <% @products.each do |product| %>
-      <li><%= link_to product.name + " (" + product.country_of_origin + ") - " + number_to_currency(product.cost, unit: "☼"), product_path(product) %></li>
+<div class="row">
+  <div class="col-lg-4">
+  <h2>Current availability:</h2>
+    <% if @products.any? %>
+      <ul>
+        <% @products.each do |product| %>
+          <li><%= link_to product.name + " (" + product.country_of_origin + ") - " + number_to_currency(product.cost, unit: "☼"), product_path(product) %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>There are no spices yet.</p>
     <% end %>
-  </ul>
-<% else %>
-  <p>There are no spices yet.</p>
-<% end %>
 
-<% if current_user && current_user.admin %>
-  <p><%= link_to "Create new Spice", new_product_path %></p>
-<% end %>
-
-<h1>Spices locally grown here on Arrakis (aka Dune)</h1>
-<h2>Blessed by Shai-Hulud</h2>
-
-<% if @products_local.any? %>
-  <ul>
-    <% @products_local.each do |product| %>
-      <li><%= link_to product.name + " - ☼" + product.cost.to_s, product_path(product) %></li>
+    <% if current_user && current_user.admin %>
+      <p><%= link_to "Create new Spice", new_product_path %></p>
     <% end %>
-  </ul>
-<% else %>
-  <p>There are no local spices at this time.</p>
-<% end %>
+  </div>
+  <div class="col-lg-4">
+    <h2>Spices locally grown here on Arrakis (aka Dune)</h2>
+    <h3>Blessed by Shai-Hulud</h3>
+
+    <% if @products_local.any? %>
+      <ul>
+        <% @products_local.each do |product| %>
+          <li><%= link_to product.name + " - ☼" + product.cost.to_s, product_path(product) %></li>
+        <% end %>
+      </ul>
+    <% else %>
+      <p>There are no local spices at this time.</p>
+    <% end %>
+  </div>
+  <div class="col-lg-4">
+    <h2>Featured Spices:</h2>
+    <% if @products.featured.any? %>
+    <ul>
+      <% @products.featured.each do |product| %>
+        <li><%= link_to product.name + " - ☼" + product.cost.to_s, product_path(product) %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>There are no featured spices at this time.</p>
+  <% end %>
+  </div>
+</div>

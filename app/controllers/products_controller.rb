@@ -6,6 +6,7 @@ class ProductsController < ApplicationController
   def index
     @products = Product.all
     @products_local = Product.local
+    @products_featured = Product.featured
     render :index
   end
   
