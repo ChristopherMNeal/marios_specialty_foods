@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :only => [:new, :edit, :destroy] do
+    flash[:alert] = "You are not authorized for this action."
     redirect_to products_path unless current_user && current_user.admin
   end
   def index
