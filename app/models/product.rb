@@ -18,15 +18,10 @@ class Product < ApplicationRecord
   scope :featured, -> { where(featured: true) }
 
   def self.search(search)
-    if search
-    product_type = Product.find_by(name: search)
-      if product_type
-        self.where(id: product_type)
-      else
-        @products = Product.all
-      end
+    if search 
+        where(["name LIKE ?","%#{search}%"])
     else
-      @products = Product.all
+        @products = Product.all
     end
   end
 
