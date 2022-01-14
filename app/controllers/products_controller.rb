@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def index
     # @products = Product.all
     # @products = Product.order(:name).page params[:page]
-    @products = Product.search(params[:search])
+    @products = Product.search(params[:search]).order(:name).page params[:page]
     @products_local = Product.local
     @products_featured = Product.featured
     render :index
