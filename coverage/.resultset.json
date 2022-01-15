@@ -643,6 +643,24 @@
           null
         ]
       },
+      "/Users/christopherneal/Desktop/marios_specialty_foods/config/initializers/kaminari_config.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/christopherneal/Desktop/marios_specialty_foods/config/initializers/mime_types.rb": {
         "lines": [
           null,
@@ -735,9 +753,12 @@
           7,
           null,
           1,
+          null,
+          null,
           14,
           14,
           14,
+          14,
           null,
           null,
           1,
@@ -762,6 +783,7 @@
           null,
           null,
           1,
+          11,
           11,
           11,
           null,
@@ -900,6 +922,15 @@
           null,
           null,
           15,
+          29,
+          null,
+          1,
+          14,
+          0,
+          null,
+          14,
+          null,
+          null,
           null,
           1,
           1,
@@ -917,6 +948,12 @@
           1,
           1,
           1,
+          null,
+          null,
+          1,
+          11,
+          null,
+          null,
           null
         ]
       },
@@ -1143,6 +1180,6 @@
         ]
       }
     },
-    "timestamp": 1642191137
+    "timestamp": 1642209133
   }
 }

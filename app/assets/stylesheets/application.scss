@@ -18,9 +18,34 @@
 
  .nav-item {
   list-style-type: none;
-  padding: 1.4rem
+  padding: 1.4rem;
+ }
+ .navbar {
+  background-color: #B9B7CA;
 }
 
 body {
-  background-image: url("../public/dune.jpg");
+  // WHY DOESN'T THIS RELATIVE PATH WORK?!
+  // background-image: url("./../images/dune.jpg");
+  background-image: url("./dune.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  background-color: #B9B7CA;
+  padding-bottom: 15px;
+}
+
+.flash {
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.error {
+  color: red;
+}
+
+a {
+  color: #000000;
 }

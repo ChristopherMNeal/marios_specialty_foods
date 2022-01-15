@@ -1,6 +1,6 @@
 <h1>Spices</h1>
 <div class="row">
-  <div class="col-lg-4">
+  <div class="col-sm-4">
     <h2>Current availability:</h2>
     <%= form_tag products_path, :method => "get" do %>
       <%= label_tag(:search, "Search for a spice:") %>
@@ -22,7 +22,7 @@
       <p><%= link_to "Create new Spice", new_product_path %></p>
     <% end %>
   </div>
-  <div class="col-lg-4">
+  <div class="col-sm-4">
     <h2>Spices locally grown here on Arrakis (aka Dune)</h2>
     <h3>Blessed by Shai-Hulud</h3>
 
@@ -36,7 +36,7 @@
       <p>There are no local spices at this time.</p>
     <% end %>
   </div>
-  <div class="col-lg-4">
+  <div class="col-sm-4">
     <h2>Featured Spices:</h2>
     <% if @products.featured.any? %>
     <ul>
