@@ -4,7 +4,6 @@
 
 #### Created By: **Christopher Neal**
 
-
 ## Technologies Used
 
 * _Ruby_
@@ -22,11 +21,14 @@
 * _ActiveRecord_
 * _Bootstrap SCSS_
 * _Faker_
-
+* _Devise_
+* _Kaminari_
 
 ## Description
 
-_This project was created for Epicodus bootcamp to show proficiency in Rails with Active Record. The application is for a specialty foods company to organize products and reviews. An admin user can add/remove/edit products and reviews._
+_This project was created for Epicodus bootcamp to show proficiency in Rails with Active Record. The application is for a specialty foods company to organize products and reviews._ 
+_All users can create an account, log in, browse products, and add reviews._
+_Additionally, admins have full CRUD functionality for products and reviews._
 
 ## Database Schema
 
@@ -47,6 +49,10 @@ _(Note: Ruby gem dependencies will be installed automatically by Bundler.)_
 * Enter `rspec` into the terminal to confirm passing of all tests.
 * Run `rails s` to start the Rails server.
 * Open browswer and enter the url http://localhost:3000/ unless otherwise prompted in the terminal.
+* From the home page, click 'Sign in' from the navbar.
+* To login as an admin user, fill in the Email form with 'admin@fake.com'
+* To login as a non-admin user, fill in the Email form with 'user@fake.com'
+* The password for either is 'f4k3p455w0rd'
 
 ## Known Bugs
 
@@ -61,10 +67,9 @@ Copyright (c) _2021_ _Christopher Neal_
 * _[christopher.m.neal@gmail.com](mailto:christopher.m.neal@gmail.com)_
 
 
-***************************************
-***************************************
-
-
+***************
+Project Prompt:
+***************
 # Mario's Speciality Foods Project Reqs
 ### General reqs
 * Comprehensive validations and callbacks to ensure information is properly saved and formatted in the database.
@@ -96,13 +101,22 @@ Copyright (c) _2021_ _Christopher Neal_
 
 ### Callbacks
 * All products are automatically titleized (first letter of each word capitalized) before they are saved to the database.
-* Seeding
+
+### Seeding
 * Your project should include seed data for 50 products and 250 reviews. Use Faker with a loop to seed the database.
-* Flash Messages
+
+### Flash Messages
 * The project should include flash success and error messages for creating products and reviews.
 
-## Objectives
+### Authentication
+* Add authentication using either BCrypt or Devise.
+      + An admin can log in and log out of the application.
+      + An admin can add, update and delete products.
+      + An admin can add reviews.
+      + An admin can ensure that other users don't have access to CRUD functionality.
+      + A user can only create an account and add a review to a product.
 
+## Objectives
 * Does the project include thorough unit and integration test coverage?
 * Do routes follow proper convention, including a root route?
 * Does the project have the required validations and callbacks?
