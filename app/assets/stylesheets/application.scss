@@ -25,11 +25,7 @@
 }
 
 body {
-  // WHY DOESN'T THIS RELATIVE PATH WORK?!
-  // background-image: url("./../images/dune.jpg");
-  background-image: url("./dune.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-color: rgb(219, 189, 163);
 }
 
 .container {
