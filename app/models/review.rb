@@ -11,15 +11,4 @@ class Review < ApplicationRecord
     select('product_id').group('product_id').average('rating')
     )}
 
-  # scope :average_review, -> {(
-  #   select("products.id, products.name, average(reviews.rating) as reviews_avg")
-  #   .joins(:reviews)
-  #   .group("products.id")
-  #   .order("reviews_count DESC")
-  #   .limit(1)
-  # )}
-
-  # Review.average(:rating)
-  # Product.select("products.id")
-
 end

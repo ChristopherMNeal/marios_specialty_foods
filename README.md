@@ -61,7 +61,7 @@ _(Note: Ruby gem dependencies will be installed automatically by Bundler.)_
 ## License
 
 _[MIT](https://opensource.org/licenses/MIT)_
-Copyright (c) _2021_ _Christopher Neal_
+Copyright (c) _2022_ _Christopher Neal_
 
 ## Support and Contact Details
 * _[christopher.m.neal@gmail.com](mailto:christopher.m.neal@gmail.com)_
