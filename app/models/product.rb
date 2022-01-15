@@ -25,19 +25,6 @@ class Product < ApplicationRecord
     end
   end
 
-  scope :average_review, -> {( select('product_id').group('product_id').average('rating').to_i )}
-
-  # scope :average_review, -> {(
-  #   select("products.id, products.name, average(reviews.rating) as reviews_avg")
-  #   .joins(:reviews)
-  #   .group("products.id")
-  #   .order("reviews_count DESC")
-  #   .limit(1)
-  # )}
-
-  # Review.average(:rating)
-  # Product.select("products.id")
-
   private
     def titleize_product
       self.name = self.name.titleize

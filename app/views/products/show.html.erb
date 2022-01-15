@@ -1,6 +1,14 @@
 <h1><%= @product.name %></h1>
 <h3>Planet of Origin: <%= @product.country_of_origin %></h3>
 <h3>Cost per unit in Imperial Solari: <%= number_to_currency(@product.cost, unit: "☼") %></h3>
+<% if @average_review.any? %>
+  <h5>The average reviews are: </h5>
+  <% @average_review.each do |product| %>
+    <%= link_to review.author, product_path(product)%>
+  <% end %>
+<% else %>
+  <p>No reviewed spices to display.</p>
+<%end%>
 
 <% if @product.reviews.any? %>
   <h4>Here are the reviews for this spice:</h4>
