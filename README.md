@@ -1,6 +1,6 @@
 # _Mario's Specialty Foods_
 
-#### _Ruby week 4 Code Review project for Rails with Active Record lesson at Epicodus Bootcamp_
+#### _Ruby week 5 Code Review project for Rails with Authentication lesson at Epicodus Bootcamp_
 
 #### Created By: **Christopher Neal**
 
@@ -26,7 +26,7 @@
 
 ## Description
 
-_This project was created for Epicodus bootcamp to show proficiency in Rails with Active Record. The application is for a specialty foods company to organize products and reviews._ 
+_This project was created for Epicodus bootcamp to show proficiency in Rails with authentication and authorization. The application is for a specialty foods company to organize products and reviews._ 
 _All users can create an account, log in, browse products, and add reviews._
 _Additionally, admins have full CRUD functionality for products and reviews._
 
