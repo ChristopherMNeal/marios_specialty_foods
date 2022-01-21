@@ -3,7 +3,7 @@
 <h3>Review:</h3>
 <p><%= @review.rating %> Stars</p>
 <p><%= @review.content_body %></p>
-<p>By <%= @review.author %> on <%= @review.created_at %></p>
+<p>By <%= @review.author %> on <%= @review.created_at.strftime("%b %d, %Y") %></p>
 
 <% if current_user && current_user.admin %>
   <p><%= link_to "Edit review", edit_product_review_path(@product, @review) %></p>
