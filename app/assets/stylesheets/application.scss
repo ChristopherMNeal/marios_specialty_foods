@@ -16,20 +16,48 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- .nav-item {
+* {
+  color: #34180B;
+  font-size: 1.1em;
+}
+.nav-item {
   list-style-type: none;
   padding: 1.4rem;
- }
- .navbar {
-  background-color: #B9B7CA;
+}
+.navbar, .container {
+  background-color: #e1a96c;
+  border: 5px solid #B8C9DB;
+  border-radius: 20px;
 }
 
+.review-block {
+  margin: 1px 15px 1px 15px;
+}
+
+.navbar-brand {
+  margin-top: 2px;
+  font-size: 2em;
+  font-weight: 900;
+}
+
+.navbar {
+  margin: 0.5% 4% 1% 4%;
+}
+
+.review {
+  font-style: italic;
+  margin-left: 5px;
+}
+
+.byline {
+  font-size: .9em;
+  color: #34180bd0;
+}
 body {
-  background-color: #E8C7A2;
+  background-color: #7F95B4;
 }
 
 .container {
-  background-color: #B9B7CA;
   padding-bottom: 15px;
 }
 
@@ -43,5 +71,10 @@ body {
 }
 
 a {
-  color: #000000;
+  color: #34180b;
+  font-size: 1.1em;
+}
+
+a:hover {
+  color: #0360a5;
 }
