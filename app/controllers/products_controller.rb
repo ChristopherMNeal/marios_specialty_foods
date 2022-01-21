@@ -55,9 +55,6 @@ class ProductsController < ApplicationController
     if @product.destroy
       flash[:notice] = "Spice successfully deleted!"
       redirect_to products_path
-    else 
-      flash[:alert] = "There was an error in deleting your Spice!"
-      redirect_to product_path
     end
   end
 

@@ -52,9 +52,6 @@ class ReviewsController < ApplicationController
     if @review.destroy
       flash[:notice] = "Review successfully deleted!"
       redirect_to product_path(@review.product)
-    else
-      flash[:notice] = "There was an error in deleting your review!"
-      redirect_to product_path(@review.product)
     end
   end
 
