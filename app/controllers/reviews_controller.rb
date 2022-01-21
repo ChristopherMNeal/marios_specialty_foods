@@ -1,6 +1,8 @@
 class ReviewsController < ApplicationController
   before_action :only => [:edit, :destroy] do
-    flash[:alert] = "You are not authorized for this action."
+    if !current_user.admin
+      flash[:alert] = "You are not authorized for this action."
+    end
     redirect_to products_path unless current_user && current_user.admin
   end
   def new
@@ -47,8 +49,13 @@ class ReviewsController < ApplicationController
 
   def destroy
     @review = Review.find(params[:id])
-    @review.destroy
-    redirect_to product_path(@review.product)
+    if @review.destroy
+      flash[:notice] = "Review successfully deleted!"
+      redirect_to product_path(@review.product)
+    else
+      flash[:notice] = "There was an error in deleting your review!"
+      redirect_to product_path(@review.product)
+    end
   end
 
   private

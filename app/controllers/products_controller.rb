@@ -1,11 +1,11 @@
 class ProductsController < ApplicationController
   before_action :only => [:new, :edit, :destroy] do
-    flash[:alert] = "You are not authorized for this action."
+    if !current_user.admin
+      flash[:alert] = "You are not authorized for this action."
+    end
     redirect_to products_path unless current_user && current_user.admin
   end
   def index
-    # @products = Product.all
-    # @products = Product.order(:name).page params[:page]
     @products = Product.search(params[:search]).order(:name).page params[:page]
     @products_local = Product.local
     @products_featured = Product.featured
@@ -52,8 +52,13 @@ class ProductsController < ApplicationController
   
   def destroy
     @product = Product.find(params[:id])
-    @product.destroy
-    redirect_to products_path
+    if @product.destroy
+      flash[:notice] = "Spice successfully deleted!"
+      redirect_to products_path
+    else 
+      flash[:alert] = "There was an error in deleting your Spice!"
+      redirect_to product_path
+    end
   end
 
   private
