@@ -19,7 +19,7 @@ class Product < ApplicationRecord
 
   def self.search(search)
     if search 
-        where(["name LIKE ?","%#{search}%"])
+        where("name ilike ?","%#{search}%")
     else
         @products = Product.all
     end

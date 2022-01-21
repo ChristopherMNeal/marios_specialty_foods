@@ -755,10 +755,10 @@
           1,
           null,
           null,
-          14,
-          14,
-          14,
-          14,
+          16,
+          16,
+          16,
+          16,
           null,
           null,
           1,
@@ -921,20 +921,20 @@
           null,
           null,
           null,
+          17,
+          33,
+          null,
+          1,
+          16,
+          1,
+          null,
           15,
-          29,
-          null,
-          1,
-          14,
-          0,
-          null,
-          14,
           null,
           null,
           null,
           1,
           1,
-          14,
+          16,
           null,
           null
         ]
@@ -1132,6 +1132,28 @@
           null
         ]
       },
+      "/Users/christopherneal/Desktop/marios_specialty_foods/spec/features/search_product_pages_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/christopherneal/Desktop/marios_specialty_foods/spec/models/product_spec.rb": {
         "lines": [
           1,
@@ -1180,6 +1202,6 @@
         ]
       }
     },
-    "timestamp": 1642209133
+    "timestamp": 1642732581
   }
 }
