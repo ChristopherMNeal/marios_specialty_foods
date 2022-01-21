@@ -53,6 +53,10 @@ _(Note: Ruby gem dependencies will be installed automatically by Bundler.)_
 * To login as an admin user, fill in the Email form with 'admin@fake.com'
 * To login as a non-admin user, fill in the Email form with 'user@fake.com'
 * The password for either is 'f4k3p455w0rd'
+* If you wish to create your own login, click on 'Sign up' from the Welcome page, then fill in the form with your email and a password.
+* To change user admin permissions, first make sure the terminal is in the main project directory, then enter `rails c` to start the rails console.
+* Then, to find the correct user, enter `user = User.where(email: "user_email_goes_here")` with the user's email in the quotes.
+* To grant admin permissions, enter `user.update(admin: true)`. To revoke permissions, change the boolean to false.
 
 ## Known Bugs
 
