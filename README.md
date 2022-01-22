@@ -1,6 +1,6 @@
 # _Mario's Specialty Foods_
 
-#### _Ruby week 5 and 6 Code Review project for Rails with Authentication lesson at Epicodus Bootcamp_
+#### _Ruby week 4 and 5 Code Review project for Rails with Authentication lesson at Epicodus Bootcamp_
 
 #### Created By: **Christopher Neal**
 
