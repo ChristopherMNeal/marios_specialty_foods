@@ -32,7 +32,7 @@ _Additionally, admins have full CRUD functionality for products and reviews._
 
 ## Database Schema
 
-![image_of_database_schema](./public/muaddibs_spice_emporium_db_schema.png)
+![image_of_database_schema](./public/marios_specialty_foods_db_schema.png)
 
 ## System Requirements
 
@@ -87,7 +87,7 @@ Project Prompt:
 * The landing page should include basic information about the company and should allow users to easily navigate to other areas of the site. This page should also include the three most recently added products and the product with the most reviews. See more information in the Scopes section below.
 
 ### Products
-* The site needs to include a products section with a list of the tasty products that Mario sells. Each product should be clickable with a detail view.
+* The site needs to include a products section with a list of the tasty products that MuadDib sells. Each product should be clickable with a detail view.
 * Users should be able to add, update and delete new products.
 * Users should be able to click an individual product to see its detail page.
 * Users should be able to add a review to a product.
