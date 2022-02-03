@@ -1,4 +1,4 @@
-# _Mario's Specialty Foods_
+# _MuadDib's Spice Emporium_
 
 #### _Ruby week 4 and 5 Code Review project for Rails with Authentication lesson at Epicodus Bootcamp_
 
@@ -26,13 +26,13 @@
 
 ## Description
 
-_This project was created for Epicodus bootcamp to show proficiency in Rails with authentication and authorization. The application is for a specialty foods company to organize products and reviews._ 
+_This project was created for Epicodus bootcamp to show proficiency in Rails with authentication and authorization. The application is for a Dune themed specialty foods company to organize products and reviews._ 
 _All users can create an account, log in, browse products, and add reviews._
 _Additionally, admins have full CRUD functionality for products and reviews._
 
 ## Database Schema
 
-![image_of_database_schema](./public/marios_specialty_foods_db_schema.png)
+![image_of_database_schema](./public/muaddibs_spice_emporium_db_schema.png)
 
 ## System Requirements
 
@@ -42,7 +42,7 @@ _(Note: Ruby gem dependencies will be installed automatically by Bundler.)_
 
 ## Setup/Installation Requirements
 
-* Clone the GitHub repository: [https://github.com/christophermneal/marios_specialty_foods](https://github.com/christophermneal/marios_specialty_foods)
+* Clone the GitHub repository: [https://github.com/christophermneal/muaddibs_spice_emporium](https://github.com/christophermneal/muaddibs_spice_emporium)
 * From the main project directory, enter `bundle install` in the terminal to populate gems.
 * To create a database, type in your terminal: 
       `rake db:setup`
@@ -74,7 +74,7 @@ Copyright (c) _2022_ _Christopher Neal_
 ***************
 Project Prompt:
 ***************
-# Mario's Speciality Foods Project Reqs
+# Project Reqs
 ### General reqs
 * Comprehensive validations and callbacks to ensure information is properly saved and formatted in the database.
 
